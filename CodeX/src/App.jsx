@@ -17,7 +17,6 @@ import { siteProfile } from "./data/siteProfile";
 import { useCinematicParallax } from "./hooks/useCinematicParallax";
 import { useFadeInOnScroll } from "./hooks/useFadeInOnScroll";
 import { useLenisSmoothScroll } from "./hooks/useLenisSmoothScroll";
-import { useMagicTileEffects } from "./hooks/useMagicTileEffects";
 import { downloadResumePdf } from "./utils/downloadResumePdf";
 import { isNonEmpty, isStrictEmail } from "./utils/validators";
 
@@ -39,11 +38,6 @@ export default function App() {
   useFadeInOnScroll();
   useLenisSmoothScroll(overlaysOpen);
   useCinematicParallax({ enabled: true, paused: overlaysOpen });
-  useMagicTileEffects({
-    enabled: true,
-    glowColor: "132, 0, 255",
-    particleCount: 8,
-  });
 
   const currentYear = new Date().getFullYear();
   const formIsValid =
