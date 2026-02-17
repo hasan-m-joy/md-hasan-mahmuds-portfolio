@@ -46,7 +46,7 @@ export const workItems = [
     title: "Mini Documentary",
     type: "Long-form",
     description: "Story structure, b-roll logic, and a grade that stays natural and premium.",
-    embed: "https://www.youtube.com/embed/VIDEO_ID_3",
+    embed: "https://www.youtube.com/embed/JEngJg2S7mA",
   },
 ];
 
