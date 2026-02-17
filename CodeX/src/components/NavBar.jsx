@@ -108,10 +108,10 @@ export function NavBar({ navVisible, menuOpen, onMenuOpen, brandImageVisible, on
 
         <div className="cta">
           <a className="btn" href="#contact">
-            <span className="pill">Available</span> Book a Call
+            <span className="pill">Available</span> Book Discovery Call
           </a>
           <a className="btn primary" href="#work">
-            View Portfolio
+            View Case Work
           </a>
         </div>
 

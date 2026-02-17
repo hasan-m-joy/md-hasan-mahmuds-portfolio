@@ -14,19 +14,20 @@ export function HeroSection({
           <div className="hero-content">
             <div className="kicker">
               <span className="badge">Video Editor</span>
-              <span className="badge">Motion Graphics</span>
+              <span className="badge">Content Advisor</span>
               <span className="badge">Short-form + Long-form</span>
             </div>
 
             <h1>
               MD HASAN MAHMUD
               <br />
-              edits that feel clean, premium, and sharp.
+              edits and advises content that performs.
             </h1>
 
             <div className="sub">
-              I turn raw footage into high-retention videos with tight pacing, clear sound, and
-              minimal motion that looks expensive. No clutter. No noise. Just results.
+              I combine editing craft with content strategy so your videos keep attention and drive
+              action. Clear hooks, structured pacing, strong storytelling, and delivery built for
+              platform performance.
             </div>
 
             <div className="hero-actions">
@@ -51,15 +52,15 @@ export function HeroSection({
             <div className="stats" role="list">
               <div className="stat" role="listitem">
                 <div className="big">24-72h</div>
-                <div className="small">Typical delivery window</div>
+                <div className="small">Typical first delivery window</div>
               </div>
               <div className="stat" role="listitem">
-                <div className="big">Clean Audio</div>
-                <div className="small">Leveling + noise control</div>
+                <div className="big">Retention Focus</div>
+                <div className="small">Hook, pacing, and watch-time structure</div>
               </div>
               <div className="stat" role="listitem">
                 <div className="big">16:9 + 9:16</div>
-                <div className="small">Multi-format exports</div>
+                <div className="small">Strategy-driven multi-format exports</div>
               </div>
             </div>
           </div>
@@ -67,8 +68,8 @@ export function HeroSection({
 
         <aside className="side-card fade-in">
           <div>
-            <div className="mini-title">Editing Tools</div>
-            <div className="muted">Glass tiles with real logos.</div>
+            <div className="mini-title">Editing Stack</div>
+            <div className="muted">Production tools used in real client workflows.</div>
           </div>
 
           <div className="tile-grid" aria-label="Editing tools">
@@ -80,8 +81,8 @@ export function HeroSection({
           <div style={{ height: 6 }}></div>
 
           <div>
-            <div className="mini-title">AI Assist</div>
-            <div className="muted">Used for speed + ideas, not lazy editing.</div>
+            <div className="mini-title">AI + Research Assist</div>
+            <div className="muted">Used for ideation and speed, then refined manually.</div>
           </div>
 
           <div className="tile-grid" aria-label="AI tools">
@@ -91,18 +92,17 @@ export function HeroSection({
           </div>
 
           <div className="mini-title" style={{ marginTop: 6 }}>
-            AI Workflow I actually use
+            Content Advisory Workflow
           </div>
           <ul className="bullets">
             <li>
-              <span className="spark"></span>Generate 10 hook options, then test the best 2.
+              <span className="spark"></span>Audit content angle, audience intent, and delivery format first.
             </li>
             <li>
-              <span className="spark"></span>Rewrite for retention: shorter sentences, clearer
-              stakes.
+              <span className="spark"></span>Build hook variations and tighten script beats for retention.
             </li>
             <li>
-              <span className="spark"></span>Shot list + b-roll ideas so the edit feels planned.
+              <span className="spark"></span>Map visual structure, edit cadence, and final CTA placement.
             </li>
           </ul>
         </aside>

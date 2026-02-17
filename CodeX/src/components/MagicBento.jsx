@@ -11,44 +11,44 @@ const CAPABILITY_ICON_BASE = `${import.meta.env.BASE_URL}capabilities`;
 const cardData = [
   {
     color: '#060010',
-    title: 'Analytics',
-    description: 'Track user behavior',
-    label: 'Insights',
+    title: 'Hook Strategy',
+    description: 'Audience-first hooks for stronger first 3 seconds.',
+    label: 'Advisory',
     image: `${CAPABILITY_ICON_BASE}/analytics.svg`
   },
   {
     color: '#060010',
-    title: 'Dashboard',
-    description: 'Centralized data view',
-    label: 'Overview',
+    title: 'Narrative Structure',
+    description: 'Scene order and pacing logic that keeps viewers engaged.',
+    label: 'Story',
     image: `${CAPABILITY_ICON_BASE}/dashboard.svg`
   },
   {
     color: '#060010',
-    title: 'Collaboration',
-    description: 'Work together seamlessly',
-    label: 'Teamwork',
+    title: 'Creator Collaboration',
+    description: 'Fast feedback loops and clear revision decisions.',
+    label: 'Workflow',
     image: `${CAPABILITY_ICON_BASE}/collaboration.svg`
   },
   {
     color: '#060010',
-    title: 'Automation',
-    description: 'Streamline workflows',
+    title: 'Edit Systems',
+    description: 'Reusable templates and process for faster consistent output.',
     label: 'Efficiency',
     image: `${CAPABILITY_ICON_BASE}/automation.svg`
   },
   {
     color: '#060010',
-    title: 'Integration',
-    description: 'Connect favorite tools',
-    label: 'Connectivity',
+    title: 'Platform Fit',
+    description: 'Tailored delivery for Shorts, Reels, TikTok, and YouTube.',
+    label: 'Multi-format',
     image: `${CAPABILITY_ICON_BASE}/integration.svg`
   },
   {
     color: '#060010',
-    title: 'Security',
-    description: 'Enterprise-grade protection',
-    label: 'Protection',
+    title: 'Quality Control',
+    description: 'Final pass for audio, motion, text, and export accuracy.',
+    label: 'Final QA',
     image: `${CAPABILITY_ICON_BASE}/security.svg`
   }
 ];

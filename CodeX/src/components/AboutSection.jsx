@@ -17,7 +17,7 @@ export function AboutSection({ onVisitProfile }) {
           <div className="about-profile-card">
             <ProfileCard
               name="MD Hasan Mahmud"
-              title="Video Editor"
+              title="Video Editor & Content Advisor"
               handle="hasan_m_joy.446__"
               status="Available"
               contactText="Visit Profile"
@@ -40,15 +40,15 @@ export function AboutSection({ onVisitProfile }) {
           <div className="about-copy">
             <div className="about-copy-title">Hi, I am MD HASAN MAHMUD.</div>
             <div className="about-copy-text">
-              I edit with one goal: make the video feel easy to watch. Clean pacing, clean audio,
-              and motion that supports the story. I use AI for speed and ideation, then I do the
-              real work in the timeline.
+              I help brands and creators turn rough ideas into publish-ready content that performs.
+              My work combines edit execution with content advising: better hooks, clearer narrative
+              flow, tighter pacing, and cleaner finishing for long-form and short-form.
             </div>
 
             <div className="about-copy-chips">
-              <span className="chip">Turnaround: 24-72h</span>
+              <span className="chip">Strategy + Editing</span>
               <span className="chip">Formats: 16:9 / 9:16</span>
-              <span className="chip">Delivery: Google Drive</span>
+              <span className="chip">Delivery: 24-72h</span>
             </div>
           </div>
         </div>

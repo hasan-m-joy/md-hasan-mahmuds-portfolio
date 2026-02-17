@@ -897,6 +897,7 @@
       .about-profile-shell{ grid-column: span 12; }
       .about-copy-tile{ grid-column: span 12; }
       .about-profile-card{ width: min(380px, 100%); }
+      .services-tile{ grid-column: span 6 !important; }
     }
 
     @media (max-width: 640px){
@@ -910,6 +911,7 @@
       .contact-grid{ grid-template-columns: 1fr; }
       .about-copy-title{ font-size: 17px; }
       .about-copy-chips{ gap: 8px; }
+      .services-tile{ grid-column: span 12 !important; }
     }
 
     /* Full-screen modal on mobile */

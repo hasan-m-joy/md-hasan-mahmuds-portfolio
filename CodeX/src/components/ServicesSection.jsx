@@ -4,28 +4,28 @@ export function ServicesSection() {
       <div className="section-head">
         <div>
           <h2>Services</h2>
-          <p>Simple offers that clients understand in 5 seconds.</p>
+          <p>Editing execution plus content advisory for growth-focused creators and brands.</p>
         </div>
       </div>
 
       <div className="grid">
-        <div className="card pad services-tile" style={{ gridColumn: "span 6" }}>
-          <div className="mini-title">Editing</div>
+        <div className="card pad services-tile" style={{ gridColumn: "span 4" }}>
+          <div className="mini-title">Video Editing</div>
           <ul className="bullets" style={{ marginTop: 10 }}>
             <li>
-              <span className="spark"></span>YouTube long-form edits (8-25 min)
+              <span className="spark"></span>Long-form YouTube edits (8-25 min)
             </li>
             <li>
               <span className="spark"></span>Shorts/Reels/TikTok repurposing
             </li>
             <li>
-              <span className="spark"></span>Podcast to narrative retention-focused cut
+              <span className="spark"></span>Narrative restructuring for retention
             </li>
           </ul>
         </div>
 
-        <div className="card pad services-tile" style={{ gridColumn: "span 6" }}>
-          <div className="mini-title">Motion + Polish</div>
+        <div className="card pad services-tile" style={{ gridColumn: "span 4" }}>
+          <div className="mini-title">Motion + Finishing</div>
           <ul className="bullets" style={{ marginTop: 10 }}>
             <li>
               <span className="spark"></span>Minimal titles + lower thirds
@@ -34,7 +34,22 @@ export function ServicesSection() {
               <span className="spark"></span>Subtitles that look premium
             </li>
             <li>
-              <span className="spark"></span>Audio cleanup + leveling + SFX
+              <span className="spark"></span>Audio cleanup, leveling, and polish
+            </li>
+          </ul>
+        </div>
+
+        <div className="card pad services-tile" style={{ gridColumn: "span 4" }}>
+          <div className="mini-title">Content Advisory</div>
+          <ul className="bullets" style={{ marginTop: 10 }}>
+            <li>
+              <span className="spark"></span>Hook and topic angle recommendations
+            </li>
+            <li>
+              <span className="spark"></span>Retention map for script and scene order
+            </li>
+            <li>
+              <span className="spark"></span>Packaging notes: title, thumbnail, CTA timing
             </li>
           </ul>
         </div>

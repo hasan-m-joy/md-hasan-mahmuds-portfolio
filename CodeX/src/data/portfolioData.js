@@ -1,51 +1,51 @@
 export const editingTools = [
-  { name: "After Effects", detail: "Titles | motion | VFX", iconText: "AE" },
-  { name: "Premiere Pro", detail: "Cut | pacing | export", iconText: "PR" },
+  { name: "After Effects", detail: "Motion systems | transitions | clean graphics", iconText: "AE" },
+  { name: "Premiere Pro", detail: "Edit pacing | narrative flow | final export", iconText: "PR" },
   {
     name: "DaVinci Resolve",
-    detail: "Color | finishing",
+    detail: "Color consistency | finishing passes",
     iconImage: "https://cdn.simpleicons.org/davinciresolve/ffffff",
     iconAlt: "DaVinci Resolve logo",
   },
-  { name: "Sound Design", detail: "Impact | clarity", iconText: "SFX" },
+  { name: "Sound Design", detail: "Dialogue cleanup | levels | impact", iconText: "SFX" },
 ];
 
 export const aiTools = [
   {
     name: "Gemini",
-    detail: "Ideas | outlines",
+    detail: "Topic ideation | outline options",
     iconImage: "https://cdn.simpleicons.org/googlegemini/ffffff",
     iconAlt: "Google Gemini logo",
   },
-  { name: "GPT", detail: "Hooks | scripts", iconText: "GPT" },
+  { name: "GPT", detail: "Hook variants | script tightening", iconText: "GPT" },
   {
     name: "Perplexity",
-    detail: "Research | sources",
+    detail: "Audience research | reference sourcing",
     iconImage: "https://cdn.simpleicons.org/perplexity/ffffff",
     iconAlt: "Perplexity logo",
   },
-  { name: "QC Pass", detail: "Checks | polish", iconText: "QC" },
+  { name: "QC Pass", detail: "Delivery checklist | quality control", iconText: "QC" },
 ];
 
 export const workItems = [
   {
-    title: "Brand Ad Cut",
-    type: "Commercial",
+    title: "Brand Story Ad Cut",
+    type: "Commercial + Advisory",
     description:
-      "Premium pacing, readable typography, and sound design that hits without being loud.",
-    embed: "https://www.youtube.com/embed/VIDEO_ID_1",
+      "Story-first commercial pacing with clear messaging and premium finishing built for conversion.",
+    embed: "https://www.youtube.com/embed/JEngJg2S7mA?start=12",
   },
   {
     title: "Creator Retention Pack",
-    type: "Short-form",
+    type: "Short-form + Strategy",
     description:
-      "Hook-first edits, clean subtitles, and pattern interrupts that do not feel childish.",
-    embed: "https://www.youtube.com/embed/VIDEO_ID_2",
+      "Hook-first edits, subtitle rhythm, and pacing strategy that keeps viewers watching longer.",
+    embed: "https://www.youtube.com/embed/JEngJg2S7mA?start=44",
   },
   {
     title: "Mini Documentary",
-    type: "Long-form",
-    description: "Story structure, b-roll logic, and a grade that stays natural and premium.",
+    type: "Long-form + Narrative",
+    description: "Structured storytelling, intentional b-roll sequencing, and natural premium color.",
     embed: "https://www.youtube.com/embed/JEngJg2S7mA",
   },
 ];

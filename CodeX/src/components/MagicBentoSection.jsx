@@ -6,7 +6,7 @@ export function MagicBentoSection() {
       <div className="section-head">
         <div>
           <h2>Capabilities</h2>
-          <p>Interactive cards for your editing strengths and delivery workflow.</p>
+          <p>What clients get when they hire me as editor plus content advisor.</p>
         </div>
       </div>
 
