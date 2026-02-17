@@ -24,6 +24,8 @@ export function WorkSection({ workItems, onOpenWorkItem }) {
         <div className="work">
           {workItems.map((item, index) => {
             const hasPreview = isValidEmbed(item.embed || "");
+            const showImagePreview = item.previewMode === "image" && Boolean(item.thumbnail);
+            const showVideoPreview = hasPreview && !showImagePreview;
             const depth = 10 + (index % 3) * 6;
 
             return (
@@ -38,8 +40,17 @@ export function WorkSection({ workItems, onOpenWorkItem }) {
                   onOpenWorkItem(item);
                 }}
               >
-                <div className={`thumb${hasPreview ? " has-preview" : ""}`} aria-hidden="true">
-                  {hasPreview && (
+                <div className={`thumb${showVideoPreview ? " has-preview" : ""}`} aria-hidden="true">
+                  {showImagePreview && (
+                    <img
+                      className="work-preview-image"
+                      src={item.thumbnail}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                  {showVideoPreview && (
                     <>
                       <LazyVideoEmbed
                         className="work-preview-frame"
@@ -52,6 +63,11 @@ export function WorkSection({ workItems, onOpenWorkItem }) {
                         <span className="work-preview-text">Tap to open fullscreen preview</span>
                       </div>
                     </>
+                  )}
+                  {showImagePreview && (
+                    <div className="work-preview-overlay">
+                      <span className="work-preview-text">Tap to open fullscreen preview</span>
+                    </div>
                   )}
                 </div>
                 <div className="info">

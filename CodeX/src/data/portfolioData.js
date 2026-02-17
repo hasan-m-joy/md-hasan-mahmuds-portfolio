@@ -1,5 +1,6 @@
 // Update this single ID when you replace your main showreel video.
 const SHOWREEL_YOUTUBE_ID = "JEngJg2S7mA";
+const WORK_THUMB_BASE = `${import.meta.env.BASE_URL}work`;
 
 const makeYouTubeEmbed = (videoId, startSeconds) =>
   `https://www.youtube.com/embed/${videoId}${startSeconds ? `?start=${startSeconds}` : ""}`;
@@ -40,6 +41,8 @@ export const workItems = [
     description:
       "Story-first commercial pacing with clear messaging and premium finishing built for conversion.",
     embed: makeYouTubeEmbed(SHOWREEL_YOUTUBE_ID, 12),
+    previewMode: "image",
+    thumbnail: `${WORK_THUMB_BASE}/brand-story-ad-cut.svg`,
   },
   {
     title: "Creator Retention Pack",
@@ -47,12 +50,15 @@ export const workItems = [
     description:
       "Hook-first edits, subtitle rhythm, and pacing strategy that keeps viewers watching longer.",
     embed: makeYouTubeEmbed(SHOWREEL_YOUTUBE_ID, 44),
+    previewMode: "image",
+    thumbnail: `${WORK_THUMB_BASE}/creator-retention-pack.svg`,
   },
   {
     title: "Mini Documentary",
     type: "Long-form + Narrative",
     description: "Structured storytelling, intentional b-roll sequencing, and natural premium color.",
     embed: makeYouTubeEmbed(SHOWREEL_YOUTUBE_ID),
+    previewMode: "video",
   },
 ];
 
