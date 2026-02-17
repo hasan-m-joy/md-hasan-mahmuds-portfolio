@@ -363,6 +363,19 @@
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pc-status::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #35d07f;
+  box-shadow: 0 0 10px rgba(53, 208, 127, 0.9);
+  flex: 0 0 auto;
 }
 
 .pc-contact-btn {
