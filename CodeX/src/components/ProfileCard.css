@@ -285,7 +285,7 @@
   backface-visibility: hidden;
   will-change: transform;
   transition: transform 120ms ease-out;
-  filter: grayscale(0.95) contrast(1.12) brightness(0.96);
+  filter: grayscale(0.92) sepia(0.22) hue-rotate(188deg) saturate(0.86) contrast(1.12) brightness(0.95);
   mix-blend-mode: luminosity;
   -webkit-mask-image: radial-gradient(72% 94% at 50% 42%, #000 56%, transparent 86%);
   mask-image: radial-gradient(72% 94% at 50% 42%, #000 56%, transparent 86%);
