@@ -2,7 +2,13 @@ import { isValidEmbed } from "../utils/validators";
 
 export function WorkSection({ workItems, onOpenWorkItem }) {
   return (
-    <section id="work" className="fade-in">
+    <section
+      id="work"
+      className="fade-in parallax-float"
+      data-parallax="26"
+      data-parallax-scale="0.012"
+      data-parallax-fade="0.12"
+    >
       <div className="section-head">
         <div>
           <h2>Selected Work</h2>
@@ -15,13 +21,16 @@ export function WorkSection({ workItems, onOpenWorkItem }) {
 
       <div className="grid">
         <div className="work">
-          {workItems.map((item) => {
+          {workItems.map((item, index) => {
             const hasPreview = isValidEmbed(item.embed || "");
+            const depth = 10 + (index % 3) * 6;
 
             return (
               <a
                 key={item.title}
-                className="card work-card"
+                className="card work-card parallax-float"
+                data-parallax={String(depth)}
+                data-parallax-scale="0.010"
                 href="#"
                 onClick={(event) => {
                   event.preventDefault();

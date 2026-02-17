@@ -1,6 +1,12 @@
 export function ServicesSection() {
   return (
-    <section id="services" className="fade-in">
+    <section
+      id="services"
+      className="fade-in parallax-float"
+      data-parallax="22"
+      data-parallax-scale="0.010"
+      data-parallax-fade="0.10"
+    >
       <div className="section-head">
         <div>
           <h2>Services</h2>
@@ -9,7 +15,7 @@ export function ServicesSection() {
       </div>
 
       <div className="grid">
-        <div className="card pad services-tile" style={{ gridColumn: "span 4" }}>
+        <div className="card pad services-tile parallax-float" data-parallax="14" style={{ gridColumn: "span 4" }}>
           <div className="mini-title">Video Editing</div>
           <ul className="bullets" style={{ marginTop: 10 }}>
             <li>
@@ -24,7 +30,7 @@ export function ServicesSection() {
           </ul>
         </div>
 
-        <div className="card pad services-tile" style={{ gridColumn: "span 4" }}>
+        <div className="card pad services-tile parallax-float" data-parallax="20" style={{ gridColumn: "span 4" }}>
           <div className="mini-title">Motion + Finishing</div>
           <ul className="bullets" style={{ marginTop: 10 }}>
             <li>
@@ -39,7 +45,7 @@ export function ServicesSection() {
           </ul>
         </div>
 
-        <div className="card pad services-tile" style={{ gridColumn: "span 4" }}>
+        <div className="card pad services-tile parallax-float" data-parallax="26" style={{ gridColumn: "span 4" }}>
           <div className="mini-title">Content Advisory</div>
           <ul className="bullets" style={{ marginTop: 10 }}>
             <li>

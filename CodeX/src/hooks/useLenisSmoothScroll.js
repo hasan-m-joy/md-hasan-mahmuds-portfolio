@@ -14,10 +14,11 @@ export function useLenisSmoothScroll(paused = false) {
     }
 
     const lenis = new Lenis({
-      duration: 1.05,
+      duration: 1.35,
+      easing: (t) => Math.min(1, 1.001 - 2 ** (-10 * t)),
       smoothWheel: true,
-      wheelMultiplier: 0.9,
-      touchMultiplier: 1.1,
+      wheelMultiplier: 0.78,
+      touchMultiplier: 0.95,
       anchors: true,
     });
 

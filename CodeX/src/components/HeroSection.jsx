@@ -6,9 +6,23 @@ export function HeroSection({
   onDownloadResume,
 }) {
   return (
-    <header className="hero">
+    <header id="hero" className="hero parallax-float" data-parallax="10" data-parallax-scale="0.006">
       <div className="container hero-grid">
-        <div className="hero-card fade-in">
+        <div className="hero-card fade-in parallax-float" data-parallax="28" data-parallax-scale="0.015">
+          <div
+            className="hero-cinematic-aurora hero-cinematic-aurora--one parallax-float"
+            data-parallax="58"
+            data-parallax-x="-32"
+            data-parallax-scale="0.08"
+            aria-hidden="true"
+          ></div>
+          <div
+            className="hero-cinematic-aurora hero-cinematic-aurora--two parallax-float"
+            data-parallax="-44"
+            data-parallax-x="30"
+            data-parallax-scale="0.06"
+            aria-hidden="true"
+          ></div>
           <div className="hero-overlay" aria-hidden="true"></div>
 
           <div className="hero-content">
@@ -66,7 +80,7 @@ export function HeroSection({
           </div>
         </div>
 
-        <aside className="side-card fade-in">
+        <aside className="side-card fade-in parallax-float" data-parallax="34" data-parallax-scale="0.012">
           <div>
             <div className="mini-title">Editing Stack</div>
             <div className="muted">Production tools used in real client workflows.</div>

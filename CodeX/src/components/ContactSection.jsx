@@ -12,7 +12,13 @@ export function ContactSection({
   const emailPattern = String.raw`^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$`;
 
   return (
-    <section id="contact" className="fade-in">
+    <section
+      id="contact"
+      className="fade-in parallax-float"
+      data-parallax="18"
+      data-parallax-scale="0.008"
+      data-parallax-fade="0.08"
+    >
       <div className="section-head">
         <div>
           <h2>Contact</h2>
@@ -20,7 +26,7 @@ export function ContactSection({
       </div>
 
       <div className="grid">
-        <div className="card pad" style={{ gridColumn: "span 12" }}>
+        <div className="card pad parallax-float" data-parallax="12" style={{ gridColumn: "span 12" }}>
           <form onSubmit={onSubmit} style={{ display: "grid", gap: 12 }}>
             <div className="contact-grid">
               <label style={{ display: "grid", gap: 6 }}>

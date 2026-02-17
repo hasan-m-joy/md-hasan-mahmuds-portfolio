@@ -2,7 +2,13 @@ import MagicBento from "./MagicBento";
 
 export function MagicBentoSection() {
   return (
-    <section id="capabilities" className="fade-in">
+    <section
+      id="capabilities"
+      className="fade-in parallax-float"
+      data-parallax="20"
+      data-parallax-scale="0.010"
+      data-parallax-fade="0.10"
+    >
       <div className="section-head">
         <div>
           <h2>Capabilities</h2>
@@ -11,7 +17,7 @@ export function MagicBentoSection() {
       </div>
 
       <div className="grid">
-        <div className="card magic-bento-shell" style={{ gridColumn: "span 12" }}>
+        <div className="card magic-bento-shell parallax-float" data-parallax="14" style={{ gridColumn: "span 12" }}>
           <MagicBento
             textAutoHide
             enableStars

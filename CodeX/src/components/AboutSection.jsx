@@ -5,7 +5,13 @@ export function AboutSection({ onVisitProfile }) {
   const iconPatternUrl = `${import.meta.env.BASE_URL}j-icons-pattern.svg`;
 
   return (
-    <section id="about" className="fade-in">
+    <section
+      id="about"
+      className="fade-in parallax-float"
+      data-parallax="18"
+      data-parallax-scale="0.010"
+      data-parallax-fade="0.15"
+    >
       <div className="section-head">
         <div>
           <h2>About</h2>
@@ -13,7 +19,12 @@ export function AboutSection({ onVisitProfile }) {
       </div>
 
       <div className="grid">
-        <div className="about-profile-shell">
+        <div
+          className="about-profile-shell parallax-float"
+          data-parallax="30"
+          data-parallax-x="-8"
+          data-parallax-scale="0.018"
+        >
           <div className="about-profile-card">
             <ProfileCard
               name={siteProfile.fullName}
@@ -36,7 +47,7 @@ export function AboutSection({ onVisitProfile }) {
           </div>
         </div>
 
-        <div className="card pad about-copy-tile">
+        <div className="card pad about-copy-tile parallax-float" data-parallax="22" data-parallax-scale="0.010">
           <div className="about-copy">
             <div className="about-copy-title">{siteProfile.aboutHeading}</div>
             <div className="about-copy-text">

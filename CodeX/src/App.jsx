@@ -14,6 +14,7 @@ import { SiteFooter } from "./components/SiteFooter";
 import { WorkSection } from "./components/WorkSection";
 import { aiTools, editingTools, showreel, workItems } from "./data/portfolioData";
 import { siteProfile } from "./data/siteProfile";
+import { useCinematicParallax } from "./hooks/useCinematicParallax";
 import { useFadeInOnScroll } from "./hooks/useFadeInOnScroll";
 import { useLenisSmoothScroll } from "./hooks/useLenisSmoothScroll";
 import { useMagicTileEffects } from "./hooks/useMagicTileEffects";
@@ -37,6 +38,7 @@ export default function App() {
 
   useFadeInOnScroll();
   useLenisSmoothScroll(overlaysOpen);
+  useCinematicParallax({ enabled: true, paused: overlaysOpen });
   useMagicTileEffects({
     enabled: true,
     glowColor: "132, 0, 255",
@@ -219,6 +221,11 @@ export default function App() {
           style={{ width: "100%", height: "100%" }}
         />
         <div id="liquidEtherOverlay"></div>
+      </div>
+      <div id="cinematicParallaxFx" aria-hidden="true">
+        <span className="cinematic-layer cinematic-layer-1"></span>
+        <span className="cinematic-layer cinematic-layer-2"></span>
+        <span className="cinematic-layer cinematic-layer-3"></span>
       </div>
 
       <NavBar

@@ -4,7 +4,13 @@ export function ShowreelSection({ showreel, onOpenShowreel }) {
   const hasPreview = isValidEmbed(showreel?.embed || "");
 
   return (
-    <section id="showreel" className="fade-in">
+    <section
+      id="showreel"
+      className="fade-in parallax-float"
+      data-parallax="24"
+      data-parallax-scale="0.012"
+      data-parallax-fade="0.12"
+    >
       <div className="section-head">
         <div>
           <h2>Showreel</h2>
@@ -13,7 +19,7 @@ export function ShowreelSection({ showreel, onOpenShowreel }) {
       </div>
 
       <div className="grid">
-        <div className="card video-box">
+        <div className="card video-box parallax-float" data-parallax="16">
           <div
             className={`video${hasPreview ? " has-preview" : ""}`}
             role="button"
