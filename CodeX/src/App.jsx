@@ -263,6 +263,10 @@ export default function App() {
         </div>
       </div>
 
+      <div className="container">
+        <AboutSection onVisitProfile={() => setInstagramPanelOpen(true)} />
+      </div>
+
       <HeroSection
         editingTools={editingTools}
         aiTools={aiTools}
@@ -270,7 +274,6 @@ export default function App() {
       />
 
       <main className="container">
-        <AboutSection onVisitProfile={() => setInstagramPanelOpen(true)} />
         <ShowreelSection showreel={showreel} onOpenShowreel={() => openModal(showreel)} />
         <WorkSection workItems={workItems} onOpenWorkItem={openWorkItem} />
         <ServicesSection />
