@@ -2,6 +2,7 @@ export function ContactSection({
   formData,
   emailFeedback,
   formIsValid,
+  isSubmitting,
   formMessage,
   onUpdateField,
   onTrimField,
@@ -12,7 +13,6 @@ export function ContactSection({
       <div className="section-head">
         <div>
           <h2>Contact</h2>
-          <p>Wire this form to Formspree/Netlify, or a backend later.</p>
         </div>
       </div>
 
@@ -96,8 +96,8 @@ export function ContactSection({
             </label>
 
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-              <button className="btn primary" type="submit" disabled={!formIsValid}>
-                Send Message
+              <button className="btn primary" type="submit" disabled={!formIsValid || isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
               <span style={{ color: "var(--muted)", fontSize: 13 }}>{formMessage}</span>
             </div>

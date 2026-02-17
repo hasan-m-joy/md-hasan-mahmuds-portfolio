@@ -21,6 +21,7 @@ export default function App() {
   const [instagramPanelOpen, setInstagramPanelOpen] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
   const [brandImageVisible, setBrandImageVisible] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formMessage, setFormMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
@@ -76,7 +77,7 @@ export default function App() {
     setFormData((prev) => ({ ...prev, [field]: prev[field].trim() }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!formIsValid) {
@@ -84,7 +85,43 @@ export default function App() {
       return;
     }
 
-    setFormMessage("Message captured. Connect this to Formspree/Netlify Forms when you publish.");
+    const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT?.trim();
+    if (!endpoint) {
+      setFormMessage("Contact endpoint missing. Set VITE_CONTACT_ENDPOINT in .env.local.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setFormMessage("Sending...");
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.details,
+          details: formData.details,
+          source: "portfolio-site",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed: ${response.status}`);
+      }
+
+      setFormData({ name: "", email: "", details: "" });
+      setFormMessage("Message sent successfully.");
+    } catch (error) {
+      setFormMessage("Could not send the message right now. Please try again.");
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   useEffect(() => {
@@ -241,6 +278,7 @@ export default function App() {
           formData={formData}
           emailFeedback={emailFeedback}
           formIsValid={formIsValid}
+          isSubmitting={isSubmitting}
           formMessage={formMessage}
           onUpdateField={updateField}
           onTrimField={trimField}
