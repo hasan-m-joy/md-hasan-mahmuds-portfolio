@@ -66,6 +66,28 @@
   font-size: 16px;
 }
 
+.magic-bento-card__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 74px;
+  margin: 0.45em 0;
+}
+
+.magic-bento-card__image {
+  width: clamp(48px, 22%, 74px);
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
+  padding: 8px;
+  box-shadow:
+    0 0 18px rgba(132, 0, 255, 0.35),
+    0 8px 22px rgba(0, 0, 0, 0.34);
+}
+
 .magic-bento-card__title,
 .magic-bento-card__description {
   --clamp-title: 1;

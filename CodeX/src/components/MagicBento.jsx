@@ -6,43 +6,50 @@ const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
 const DEFAULT_GLOW_COLOR = '132, 0, 255';
 const MOBILE_BREAKPOINT = 768;
+const CAPABILITY_ICON_BASE = `${import.meta.env.BASE_URL}capabilities`;
 
 const cardData = [
   {
     color: '#060010',
     title: 'Analytics',
     description: 'Track user behavior',
-    label: 'Insights'
+    label: 'Insights',
+    image: `${CAPABILITY_ICON_BASE}/analytics.svg`
   },
   {
     color: '#060010',
     title: 'Dashboard',
     description: 'Centralized data view',
-    label: 'Overview'
+    label: 'Overview',
+    image: `${CAPABILITY_ICON_BASE}/dashboard.svg`
   },
   {
     color: '#060010',
     title: 'Collaboration',
     description: 'Work together seamlessly',
-    label: 'Teamwork'
+    label: 'Teamwork',
+    image: `${CAPABILITY_ICON_BASE}/collaboration.svg`
   },
   {
     color: '#060010',
     title: 'Automation',
     description: 'Streamline workflows',
-    label: 'Efficiency'
+    label: 'Efficiency',
+    image: `${CAPABILITY_ICON_BASE}/automation.svg`
   },
   {
     color: '#060010',
     title: 'Integration',
     description: 'Connect favorite tools',
-    label: 'Connectivity'
+    label: 'Connectivity',
+    image: `${CAPABILITY_ICON_BASE}/integration.svg`
   },
   {
     color: '#060010',
     title: 'Security',
     description: 'Enterprise-grade protection',
-    label: 'Protection'
+    label: 'Protection',
+    image: `${CAPABILITY_ICON_BASE}/security.svg`
   }
 ];
 
@@ -525,6 +532,14 @@ const MagicBento = ({
                 <div className="magic-bento-card__header">
                   <div className="magic-bento-card__label">{card.label}</div>
                 </div>
+                <div className="magic-bento-card__visual">
+                  <img
+                    className="magic-bento-card__image"
+                    src={card.image}
+                    alt={`${card.title} icon`}
+                    loading="lazy"
+                  />
+                </div>
                 <div className="magic-bento-card__content">
                   <h2 className="magic-bento-card__title">{card.title}</h2>
                   <p className="magic-bento-card__description">{card.description}</p>
@@ -647,6 +662,14 @@ const MagicBento = ({
             >
               <div className="magic-bento-card__header">
                 <div className="magic-bento-card__label">{card.label}</div>
+              </div>
+              <div className="magic-bento-card__visual">
+                <img
+                  className="magic-bento-card__image"
+                  src={card.image}
+                  alt={`${card.title} icon`}
+                  loading="lazy"
+                />
               </div>
               <div className="magic-bento-card__content">
                 <h2 className="magic-bento-card__title">{card.title}</h2>
