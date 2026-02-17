@@ -7,7 +7,6 @@ export function AboutSection({ onVisitProfile }) {
       <div className="section-head">
         <div>
           <h2>About</h2>
-          <p>Your photo is used here. Keep it clean and trust-building.</p>
         </div>
       </div>
 
