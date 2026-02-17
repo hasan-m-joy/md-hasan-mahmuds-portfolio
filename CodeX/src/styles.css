@@ -12,6 +12,8 @@
       --glass2: rgba(255,255,255,0.10);
       --stroke: rgba(255,255,255,0.14);
       --stroke2: rgba(255,255,255,0.22);
+      --font-body: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-display: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     *{ box-sizing:border-box; }
@@ -21,7 +23,7 @@
       margin:0;
       background: var(--bg); /* Liquid Ether handles the background now */
       color: var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial;
+      font-family: var(--font-body);
       letter-spacing: -0.01em;
       overflow-x:hidden;
     }
@@ -339,10 +341,14 @@
       background: rgba(255,255,255,0.06);
     }
     h1{
+      font-family: var(--font-display);
       margin:0;
       font-size: clamp(34px, 4.2vw, 54px);
       line-height: 1.02;
       letter-spacing: -0.04em;
+    }
+    h2, h3, .mini-title, .btn, .chip{
+      font-family: var(--font-display);
     }
     .sub{
       max-width: 62ch;
