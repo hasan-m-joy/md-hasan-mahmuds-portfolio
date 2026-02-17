@@ -2,6 +2,8 @@ import profileImage from "../../profile.png";
 import ProfileCard from "./ProfileCard";
 
 export function AboutSection({ onVisitProfile }) {
+  const iconPatternUrl = `${import.meta.env.BASE_URL}j-icons-pattern.svg`;
+
   return (
     <section id="about" className="fade-in">
       <div className="section-head">
@@ -36,7 +38,7 @@ export function AboutSection({ onVisitProfile }) {
                   onContactClick={onVisitProfile}
                   behindGlowColor="hsla(201, 100%, 70%, 0.45)"
                   behindGlowEnabled
-                  iconUrl="/j-icons-pattern.svg"
+                  iconUrl={iconPatternUrl}
                   grainUrl=""
                   innerGradient="linear-gradient(145deg, hsla(201, 40%, 45%, 0.45) 0%, hsla(11, 60%, 70%, 0.2) 100%)"
                 />
