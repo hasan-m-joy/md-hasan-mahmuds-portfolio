@@ -58,7 +58,8 @@ export const workItems = [
     type: "Long-form + Narrative",
     description: "Structured storytelling, intentional b-roll sequencing, and natural premium color.",
     embed: makeYouTubeEmbed(SHOWREEL_YOUTUBE_ID),
-    previewMode: "video",
+    previewMode: "image",
+    thumbnail: `${WORK_THUMB_BASE}/mini-documentary.svg`,
   },
 ];
 

@@ -1,34 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800">
   <defs>
     <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0f1635"/>
-      <stop offset="45%" stop-color="#122c3f"/>
-      <stop offset="100%" stop-color="#1a1530"/>
+      <stop offset="0%" stop-color="#08152b"/>
+      <stop offset="52%" stop-color="#0d2a3f"/>
+      <stop offset="100%" stop-color="#221238"/>
     </linearGradient>
-    <radialGradient id="retGlowA" cx="0.25" cy="0.25" r="0.8">
-      <stop offset="0%" stop-color="#58ffd3" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#58ffd3" stop-opacity="0"/>
+    <radialGradient id="ga" cx="0.22" cy="0.16" r="0.9">
+      <stop offset="0%" stop-color="#53ffd5" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#53ffd5" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="retGlowB" cx="0.78" cy="0.35" r="0.75">
-      <stop offset="0%" stop-color="#6f7dff" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#6f7dff" stop-opacity="0"/>
+    <radialGradient id="gb" cx="0.82" cy="0.26" r="0.78">
+      <stop offset="0%" stop-color="#7691ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#7691ff" stop-opacity="0"/>
     </radialGradient>
   </defs>
+
   <rect width="1280" height="800" fill="url(#bg2)"/>
-  <rect width="1280" height="800" fill="url(#retGlowA)"/>
-  <rect width="1280" height="800" fill="url(#retGlowB)"/>
-  <g opacity="0.18">
-    <rect x="72" y="68" width="1136" height="664" rx="32" fill="#ffffff"/>
-  </g>
-  <g opacity="0.34">
-    <rect x="110" y="112" width="500" height="268" rx="22" fill="#0d1125"/>
-    <rect x="636" y="112" width="530" height="128" rx="22" fill="#0d1125"/>
-    <rect x="636" y="252" width="530" height="128" rx="22" fill="#0d1125"/>
-    <rect x="110" y="396" width="1056" height="290" rx="22" fill="#0d1125"/>
-  </g>
-  <g fill="#e4f2ff">
-    <text x="130" y="206" font-size="50" font-family="Arial, Helvetica, sans-serif" font-weight="700">Creator Retention Pack</text>
-    <text x="130" y="262" font-size="30" font-family="Arial, Helvetica, sans-serif" opacity="0.82">Short-form + Strategy</text>
-    <text x="130" y="486" font-size="34" font-family="Arial, Helvetica, sans-serif" opacity="0.92">Hook-first opening • Subtitle rhythm • Higher watch-time pacing</text>
-  </g>
+  <rect width="1280" height="800" fill="url(#ga)"/>
+  <rect width="1280" height="800" fill="url(#gb)"/>
+
+  <rect x="64" y="56" width="1152" height="688" rx="34" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="94" y="86" width="1092" height="628" rx="26" fill="#0b1325" fill-opacity="0.56"/>
+
+  <text x="150" y="212" fill="#eff8ff" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">
+    Creator Retention Pack
+  </text>
+  <text x="150" y="268" fill="#d2e8ff" font-family="Arial, Helvetica, sans-serif" font-size="28" opacity="0.88">
+    Short-form + Strategy
+  </text>
+
+  <rect x="148" y="314" width="274" height="304" rx="26" fill="#121e35" stroke="#d3ebff" stroke-opacity="0.22"/>
+  <rect x="446" y="284" width="274" height="334" rx="26" fill="#121e35" stroke="#d3ebff" stroke-opacity="0.22"/>
+  <rect x="744" y="256" width="274" height="362" rx="26" fill="#121e35" stroke="#d3ebff" stroke-opacity="0.22"/>
+
+  <polyline points="180,562 270,492 370,510 520,420 650,442 820,344 980,364 1048,304"
+    fill="none" stroke="#74ffe0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="370" cy="510" r="10" fill="#74ffe0"/>
+  <circle cx="650" cy="442" r="10" fill="#74ffe0"/>
+  <circle cx="980" cy="364" r="10" fill="#74ffe0"/>
+
+  <rect x="150" y="648" width="1032" height="56" rx="14" fill="#0f1c32" stroke="#d3ebff" stroke-opacity="0.18"/>
+  <text x="168" y="685" fill="#e9f5ff" font-family="Arial, Helvetica, sans-serif" font-size="28" opacity="0.94">
+    Hook-first edits   |   Subtitle rhythm   |   Watch-time focused pacing
+  </text>
 </svg>
