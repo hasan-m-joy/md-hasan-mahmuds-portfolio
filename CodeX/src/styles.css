@@ -626,19 +626,21 @@
     .desc{ margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
 
     /* About section layout */
-    .about-layout{
-      display:grid;
-      grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
-      gap: 16px;
-      align-items: center;
-    }
-    .about-profile-col{
+    .about-profile-shell{
+      grid-column: span 5;
       display:flex;
       justify-content:center;
+      align-items: center;
       padding: 4px 0;
     }
     .about-profile-card{
       width: min(340px, 100%);
+    }
+    .about-copy-tile{
+      grid-column: span 7;
+      display:flex;
+      align-items: center;
+      min-height: 100%;
     }
     .about-copy{
       min-width: 0;
@@ -800,7 +802,8 @@
       .menu-btn{ display:flex; }
 
       .work{ grid-template-columns: 1fr; }
-      .about-layout{ grid-template-columns: 1fr; }
+      .about-profile-shell{ grid-column: span 12; }
+      .about-copy-tile{ grid-column: span 12; }
       .about-profile-card{ width: min(380px, 100%); }
     }
 
