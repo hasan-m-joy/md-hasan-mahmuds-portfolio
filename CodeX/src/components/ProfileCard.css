@@ -246,7 +246,7 @@
 }
 
 .pc-avatar-content {
-  mix-blend-mode: luminosity;
+  mix-blend-mode: normal;
   overflow: visible;
   transform: translateZ(2);
   backface-visibility: hidden;
@@ -286,6 +286,7 @@
   will-change: transform;
   transition: transform 120ms ease-out;
   filter: grayscale(0.15) contrast(1.12) brightness(0.96) saturate(0.82);
+  mix-blend-mode: luminosity;
   -webkit-mask-image: radial-gradient(72% 94% at 50% 42%, #000 56%, transparent 86%);
   mask-image: radial-gradient(72% 94% at 50% 42%, #000 56%, transparent 86%);
 }
@@ -373,8 +374,11 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #35d07f;
-  box-shadow: 0 0 10px rgba(53, 208, 127, 0.9);
+  background: #00ff66;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.25),
+    0 0 12px rgba(0, 255, 102, 0.95),
+    0 0 24px rgba(0, 255, 102, 0.65);
   flex: 0 0 auto;
 }
 
