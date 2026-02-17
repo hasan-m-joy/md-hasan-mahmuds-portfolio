@@ -368,7 +368,8 @@
   padding: 12px 16px;
   font-size: 12px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #f4f7ff, #b8c8ff);
   cursor: pointer;
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
