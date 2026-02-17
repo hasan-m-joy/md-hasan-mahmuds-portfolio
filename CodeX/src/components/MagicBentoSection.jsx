@@ -17,10 +17,10 @@ export function MagicBentoSection() {
             enableStars
             enableSpotlight
             enableBorderGlow
-            enableTilt={false}
-            enableMagnetism={false}
+            enableTilt
+            enableMagnetism
             clickEffect
-            spotlightRadius={400}
+            spotlightRadius={800}
             particleCount={12}
             glowColor="132, 0, 255"
             disableAnimations={false}
