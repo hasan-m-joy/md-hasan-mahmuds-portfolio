@@ -270,10 +270,10 @@ export default function App() {
       />
 
       <main className="container">
+        <AboutSection onVisitProfile={() => setInstagramPanelOpen(true)} />
         <ShowreelSection showreel={showreel} onOpenShowreel={() => openModal(showreel)} />
         <WorkSection workItems={workItems} onOpenWorkItem={openWorkItem} />
         <ServicesSection />
-        <AboutSection onVisitProfile={() => setInstagramPanelOpen(true)} />
         <ContactSection
           formData={formData}
           emailFeedback={emailFeedback}
