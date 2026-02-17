@@ -8,6 +8,9 @@ export function ContactSection({
   onTrimField,
   onSubmit,
 }) {
+  const nonWhitespacePattern = String.raw`.*\S.*`;
+  const emailPattern = String.raw`^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$`;
+
   return (
     <section id="contact" className="fade-in">
       <div className="section-head">
@@ -25,7 +28,7 @@ export function ContactSection({
                 <input
                   required
                   minLength={1}
-                  pattern=".*\\S.*"
+                  pattern={nonWhitespacePattern}
                   title="Please enter your name."
                   name="name"
                   placeholder="Your name"
@@ -50,7 +53,7 @@ export function ContactSection({
                   type="email"
                   name="email"
                   placeholder="you@email.com"
-                  pattern="^[^\\s@]+@[^\\s@]+\\.[A-Za-z]{2,}$"
+                  pattern={emailPattern}
                   title="Please enter a valid email like name@domain.com"
                   autoComplete="email"
                   value={formData.email}
