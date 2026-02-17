@@ -85,9 +85,13 @@ export default function App() {
       return;
     }
 
-    const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT?.trim();
-    if (!endpoint) {
-      setFormMessage("Contact endpoint missing. Set VITE_CONTACT_ENDPOINT in .env.local.");
+    const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT?.trim().replace(/\?+$/, "");
+    const nameKey = import.meta.env.VITE_GF_NAME?.trim();
+    const emailKey = import.meta.env.VITE_GF_EMAIL?.trim();
+    const detailsKey = import.meta.env.VITE_GF_DETAILS?.trim();
+
+    if (!endpoint || !nameKey || !emailKey || !detailsKey) {
+      setFormMessage("Google Form endpoint config is missing.");
       return;
     }
 
@@ -95,24 +99,20 @@ export default function App() {
     setFormMessage("Sending...");
 
     try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.details,
-          details: formData.details,
-          source: "portfolio-site",
-        }),
+      const payload = new URLSearchParams({
+        [nameKey]: formData.name,
+        [emailKey]: formData.email,
+        [detailsKey]: formData.details,
       });
 
-      if (!response.ok) {
-        throw new Error(`Request failed: ${response.status}`);
-      }
+      await fetch(endpoint, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: payload.toString(),
+      });
 
       setFormData({ name: "", email: "", details: "" });
       setFormMessage("Message sent successfully.");
