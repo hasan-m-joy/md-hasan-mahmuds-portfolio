@@ -14,16 +14,9 @@ export function AboutSection({ onVisitProfile }) {
 
       <div className="grid">
         <div className="card pad" style={{ gridColumn: "span 12" }}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "0.85fr 1.15fr",
-              gap: 16,
-              alignItems: "center",
-            }}
-          >
-            <div style={{ display: "flex", justifyContent: "center", padding: "4px 0" }}>
-              <div style={{ width: "min(340px, 100%)" }}>
+          <div className="about-layout">
+            <div className="about-profile-col">
+              <div className="about-profile-card">
                 <ProfileCard
                   name="MD Hasan Mahmud"
                   title="Video Editor"
@@ -45,15 +38,15 @@ export function AboutSection({ onVisitProfile }) {
               </div>
             </div>
 
-            <div>
-              <div style={{ fontWeight: 650, fontSize: 18 }}>Hi, I am MD HASAN MAHMUD.</div>
-              <div style={{ color: "var(--muted)", lineHeight: 1.55, marginTop: 8 }}>
+            <div className="about-copy">
+              <div className="about-copy-title">Hi, I am MD HASAN MAHMUD.</div>
+              <div className="about-copy-text">
                 I edit with one goal: make the video feel easy to watch. Clean pacing, clean
                 audio, and motion that supports the story. I use AI for speed and ideation, then I
                 do the real work in the timeline.
               </div>
 
-              <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 14 }}>
+              <div className="about-copy-chips">
                 <span className="chip">Turnaround: 24-72h</span>
                 <span className="chip">Formats: 16:9 / 9:16</span>
                 <span className="chip">Delivery: Google Drive</span>

@@ -625,6 +625,40 @@
     }
     .desc{ margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
 
+    /* About section layout */
+    .about-layout{
+      display:grid;
+      grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+      gap: 16px;
+      align-items: center;
+    }
+    .about-profile-col{
+      display:flex;
+      justify-content:center;
+      padding: 4px 0;
+    }
+    .about-profile-card{
+      width: min(340px, 100%);
+    }
+    .about-copy{
+      min-width: 0;
+    }
+    .about-copy-title{
+      font-weight: 650;
+      font-size: 18px;
+    }
+    .about-copy-text{
+      color: var(--muted);
+      line-height: 1.55;
+      margin-top: 8px;
+    }
+    .about-copy-chips{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
     /* About profile image */
     .profile-wrap{
       border-radius: 18px;
@@ -766,6 +800,8 @@
       .menu-btn{ display:flex; }
 
       .work{ grid-template-columns: 1fr; }
+      .about-layout{ grid-template-columns: 1fr; }
+      .about-profile-card{ width: min(380px, 100%); }
     }
 
     @media (max-width: 640px){
@@ -777,6 +813,8 @@
       section{ padding: 20px 0; }
 
       .contact-grid{ grid-template-columns: 1fr; }
+      .about-copy-title{ font-size: 17px; }
+      .about-copy-chips{ gap: 8px; }
     }
 
     /* Full-screen modal on mobile */
