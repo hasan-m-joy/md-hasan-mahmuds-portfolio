@@ -9,7 +9,7 @@ export function ServicesSection() {
       </div>
 
       <div className="grid">
-        <div className="card pad" style={{ gridColumn: "span 6" }}>
+        <div className="card pad services-tile" style={{ gridColumn: "span 6" }}>
           <div className="mini-title">Editing</div>
           <ul className="bullets" style={{ marginTop: 10 }}>
             <li>
@@ -24,7 +24,7 @@ export function ServicesSection() {
           </ul>
         </div>
 
-        <div className="card pad" style={{ gridColumn: "span 6" }}>
+        <div className="card pad services-tile" style={{ gridColumn: "span 6" }}>
           <div className="mini-title">Motion + Polish</div>
           <ul className="bullets" style={{ marginTop: 10 }}>
             <li>

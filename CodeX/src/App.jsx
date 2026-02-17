@@ -4,6 +4,7 @@ import { AboutSection } from "./components/AboutSection";
 import ColorBends from "./components/ColorBends";
 import { ContactSection } from "./components/ContactSection";
 import { HeroSection } from "./components/HeroSection";
+import { MagicBentoSection } from "./components/MagicBentoSection";
 import { MobileMenu } from "./components/MobileMenu";
 import { NavBar } from "./components/NavBar";
 import { PreviewModal } from "./components/PreviewModal";
@@ -13,6 +14,7 @@ import { SiteFooter } from "./components/SiteFooter";
 import { WorkSection } from "./components/WorkSection";
 import { aiTools, editingTools, showreel, workItems } from "./data/portfolioData";
 import { useFadeInOnScroll } from "./hooks/useFadeInOnScroll";
+import { useMagicTileEffects } from "./hooks/useMagicTileEffects";
 import { isNonEmpty, isStrictEmail } from "./utils/validators";
 
 export default function App() {
@@ -30,6 +32,11 @@ export default function App() {
   });
 
   useFadeInOnScroll();
+  useMagicTileEffects({
+    enabled: true,
+    glowColor: "132, 0, 255",
+    particleCount: 8,
+  });
 
   const currentYear = new Date().getFullYear();
   const formIsValid =
@@ -274,6 +281,7 @@ export default function App() {
       />
 
       <main className="container">
+        <MagicBentoSection />
         <ShowreelSection showreel={showreel} onOpenShowreel={() => openModal(showreel)} />
         <WorkSection workItems={workItems} onOpenWorkItem={openWorkItem} />
         <ServicesSection />

@@ -436,6 +436,62 @@
       pointer-events:none;
     }
 
+    .magic-fx-target{
+      --magic-glow-x: 50%;
+      --magic-glow-y: 50%;
+      --magic-glow-intensity: 0;
+      --magic-glow-radius: 220px;
+      --magic-glow-color: 132, 0, 255;
+      position: relative;
+      isolation: isolate;
+    }
+    .magic-fx-glow{
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 25;
+      border-radius: inherit;
+      padding: 1px;
+      background: radial-gradient(
+        var(--magic-glow-radius) circle at var(--magic-glow-x) var(--magic-glow-y),
+        rgba(var(--magic-glow-color), calc(var(--magic-glow-intensity) * 0.85)) 0%,
+        rgba(var(--magic-glow-color), calc(var(--magic-glow-intensity) * 0.35)) 35%,
+        transparent 68%
+      );
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      opacity: 1;
+      transition: opacity 0.25s ease;
+    }
+    .magic-fx-particle{
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      pointer-events: none;
+      z-index: 35;
+      background: rgba(var(--magic-glow-color), 1);
+      box-shadow: 0 0 12px rgba(var(--magic-glow-color), 0.95);
+    }
+    .magic-fx-ripple{
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 30;
+      background: radial-gradient(
+        circle,
+        rgba(var(--magic-glow-color), 0.32) 0%,
+        rgba(var(--magic-glow-color), 0.16) 38%,
+        transparent 72%
+      );
+    }
+
     .icon{
       width: 44px;
       height: 44px;
