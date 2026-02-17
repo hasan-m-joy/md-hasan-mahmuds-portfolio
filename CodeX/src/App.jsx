@@ -15,6 +15,7 @@ import { WorkSection } from "./components/WorkSection";
 import { aiTools, editingTools, showreel, workItems } from "./data/portfolioData";
 import { siteProfile } from "./data/siteProfile";
 import { useFadeInOnScroll } from "./hooks/useFadeInOnScroll";
+import { useLenisSmoothScroll } from "./hooks/useLenisSmoothScroll";
 import { useMagicTileEffects } from "./hooks/useMagicTileEffects";
 import { downloadResumePdf } from "./utils/downloadResumePdf";
 import { isNonEmpty, isStrictEmail } from "./utils/validators";
@@ -32,8 +33,10 @@ export default function App() {
     email: "",
     details: "",
   });
+  const overlaysOpen = menuOpen || Boolean(modalItem) || instagramPanelOpen;
 
   useFadeInOnScroll();
+  useLenisSmoothScroll(overlaysOpen);
   useMagicTileEffects({
     enabled: true,
     glowColor: "132, 0, 255",
@@ -156,12 +159,12 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen || modalItem || instagramPanelOpen ? "hidden" : "";
+    document.body.style.overflow = overlaysOpen ? "hidden" : "";
 
     return () => {
       document.body.style.overflow = "";
     };
-  }, [menuOpen, modalItem, instagramPanelOpen]);
+  }, [overlaysOpen]);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
