@@ -1,5 +1,5 @@
-import profileImage from "../../profile.png";
 import ProfileCard from "./ProfileCard";
+import { siteProfile } from "../data/siteProfile";
 
 export function AboutSection({ onVisitProfile }) {
   const iconPatternUrl = `${import.meta.env.BASE_URL}j-icons-pattern.svg`;
@@ -16,13 +16,13 @@ export function AboutSection({ onVisitProfile }) {
         <div className="about-profile-shell">
           <div className="about-profile-card">
             <ProfileCard
-              name="MD Hasan Mahmud"
-              title="Video Editor & Content Advisor"
-              handle="hasan_m_joy.446__"
-              status="Available"
+              name={siteProfile.fullName}
+              title={siteProfile.headline}
+              handle={siteProfile.handle}
+              status={siteProfile.status}
               contactText="Visit Profile"
-              avatarUrl={profileImage}
-              miniAvatarUrl={profileImage}
+              avatarUrl={siteProfile.avatarUrl}
+              miniAvatarUrl={siteProfile.avatarUrl}
               showUserInfo
               enableTilt
               enableMobileTilt
@@ -38,7 +38,7 @@ export function AboutSection({ onVisitProfile }) {
 
         <div className="card pad about-copy-tile">
           <div className="about-copy">
-            <div className="about-copy-title">Hi, I am MD HASAN MAHMUD.</div>
+            <div className="about-copy-title">{siteProfile.aboutHeading}</div>
             <div className="about-copy-text">
               I help brands and creators turn rough ideas into publish-ready content that performs.
               My work combines edit execution with content advising: better hooks, clearer narrative

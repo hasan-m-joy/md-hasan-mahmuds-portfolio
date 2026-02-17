@@ -13,8 +13,10 @@ import { ShowreelSection } from "./components/ShowreelSection";
 import { SiteFooter } from "./components/SiteFooter";
 import { WorkSection } from "./components/WorkSection";
 import { aiTools, editingTools, showreel, workItems } from "./data/portfolioData";
+import { siteProfile } from "./data/siteProfile";
 import { useFadeInOnScroll } from "./hooks/useFadeInOnScroll";
 import { useMagicTileEffects } from "./hooks/useMagicTileEffects";
+import { downloadResumePdf } from "./utils/downloadResumePdf";
 import { isNonEmpty, isStrictEmail } from "./utils/validators";
 
 export default function App() {
@@ -73,6 +75,15 @@ export default function App() {
 
   const openWorkItem = (item) => {
     openModal({ title: item.title, embed: item.embed, meta: item.description });
+  };
+
+  const handleDownloadResume = async () => {
+    try {
+      await downloadResumePdf();
+    } catch (error) {
+      console.error("Resume download failed", error);
+      window.alert("Could not download the resume right now. Please try again.");
+    }
   };
 
   const updateField = (field, value) => {
@@ -248,14 +259,14 @@ export default function App() {
                 gap: 12,
               }}
             >
-              <div style={{ fontSize: 15, fontWeight: 650 }}>@hasan_m_joy.446__</div>
+              <div style={{ fontSize: 15, fontWeight: 650 }}>@{siteProfile.handle}</div>
               <div style={{ color: "var(--muted)", fontSize: 14, lineHeight: 1.5 }}>
                 Open the Instagram profile in a new tab.
               </div>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <a
                   className="btn primary"
-                  href="https://www.instagram.com/hasan_m_joy.446__/?utm_source=ig_web_button_share_sheet"
+                  href={siteProfile.instagramUrl}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -277,7 +288,7 @@ export default function App() {
       <HeroSection
         editingTools={editingTools}
         aiTools={aiTools}
-        onDownloadResume={() => window.alert("Replace this with your resume/portfolio PDF link.")}
+        onDownloadResume={handleDownloadResume}
       />
 
       <main className="container">

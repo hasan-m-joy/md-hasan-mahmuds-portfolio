@@ -1,3 +1,9 @@
+// Update this single ID when you replace your main showreel video.
+const SHOWREEL_YOUTUBE_ID = "JEngJg2S7mA";
+
+const makeYouTubeEmbed = (videoId, startSeconds) =>
+  `https://www.youtube.com/embed/${videoId}${startSeconds ? `?start=${startSeconds}` : ""}`;
+
 export const editingTools = [
   { name: "After Effects", detail: "Motion systems | transitions | clean graphics", iconText: "AE" },
   { name: "Premiere Pro", detail: "Edit pacing | narrative flow | final export", iconText: "PR" },
@@ -33,25 +39,25 @@ export const workItems = [
     type: "Commercial + Advisory",
     description:
       "Story-first commercial pacing with clear messaging and premium finishing built for conversion.",
-    embed: "https://www.youtube.com/embed/JEngJg2S7mA?start=12",
+    embed: makeYouTubeEmbed(SHOWREEL_YOUTUBE_ID, 12),
   },
   {
     title: "Creator Retention Pack",
     type: "Short-form + Strategy",
     description:
       "Hook-first edits, subtitle rhythm, and pacing strategy that keeps viewers watching longer.",
-    embed: "https://www.youtube.com/embed/JEngJg2S7mA?start=44",
+    embed: makeYouTubeEmbed(SHOWREEL_YOUTUBE_ID, 44),
   },
   {
     title: "Mini Documentary",
     type: "Long-form + Narrative",
     description: "Structured storytelling, intentional b-roll sequencing, and natural premium color.",
-    embed: "https://www.youtube.com/embed/JEngJg2S7mA",
+    embed: makeYouTubeEmbed(SHOWREEL_YOUTUBE_ID),
   },
 ];
 
 export const showreel = {
   title: "Showreel",
-  embed: "https://www.youtube.com/embed/JEngJg2S7mA",
+  embed: makeYouTubeEmbed(SHOWREEL_YOUTUBE_ID),
   meta: "Official showreel preview.",
 };
