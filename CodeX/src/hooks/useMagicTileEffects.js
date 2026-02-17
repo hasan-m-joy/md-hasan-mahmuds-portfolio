@@ -83,6 +83,9 @@ export function useMagicTileEffects({
       el.dataset.magicFxBound = "1";
       el.classList.add("magic-fx-target");
       el.style.setProperty("--magic-glow-color", glowColor);
+      let hoverRect = null;
+      let moveRafId = 0;
+      let pendingMoveEvent = null;
 
       if (!el.querySelector(":scope > .magic-fx-glow")) {
         const glow = document.createElement("span");
@@ -91,8 +94,7 @@ export function useMagicTileEffects({
         el.appendChild(glow);
       }
 
-      const updateGlowPosition = (event) => {
-        const rect = el.getBoundingClientRect();
+      const updateGlowPosition = (event, rect) => {
         const x = ((event.clientX - rect.left) / rect.width) * 100;
         const y = ((event.clientY - rect.top) / rect.height) * 100;
         el.style.setProperty("--magic-glow-x", `${x}%`);
@@ -100,16 +102,33 @@ export function useMagicTileEffects({
       };
 
       const onEnter = (event) => {
+        hoverRect = el.getBoundingClientRect();
         el.style.setProperty("--magic-glow-intensity", "1");
-        updateGlowPosition(event);
+        updateGlowPosition(event, hoverRect);
         makeParticles(el, event);
       };
 
       const onMove = (event) => {
-        updateGlowPosition(event);
+        pendingMoveEvent = event;
+        if (moveRafId) {
+          return;
+        }
+
+        moveRafId = window.requestAnimationFrame(() => {
+          moveRafId = 0;
+          if (!pendingMoveEvent) return;
+          updateGlowPosition(pendingMoveEvent, hoverRect || el.getBoundingClientRect());
+          pendingMoveEvent = null;
+        });
       };
 
       const onLeave = () => {
+        if (moveRafId) {
+          window.cancelAnimationFrame(moveRafId);
+          moveRafId = 0;
+        }
+        pendingMoveEvent = null;
+        hoverRect = null;
         el.style.setProperty("--magic-glow-intensity", "0");
       };
 
@@ -123,6 +142,9 @@ export function useMagicTileEffects({
       el.addEventListener("click", onClick);
 
       cleanups.push(() => {
+        if (moveRafId) {
+          window.cancelAnimationFrame(moveRafId);
+        }
         el.removeEventListener("pointerenter", onEnter);
         el.removeEventListener("pointermove", onMove);
         el.removeEventListener("pointerleave", onLeave);

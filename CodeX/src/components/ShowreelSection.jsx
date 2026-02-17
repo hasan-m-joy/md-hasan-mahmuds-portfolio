@@ -1,4 +1,5 @@
 import { isValidEmbed } from "../utils/validators";
+import { LazyVideoEmbed } from "./LazyVideoEmbed";
 
 export function ShowreelSection({ showreel, onOpenShowreel }) {
   const hasPreview = isValidEmbed(showreel?.embed || "");
@@ -34,13 +35,13 @@ export function ShowreelSection({ showreel, onOpenShowreel }) {
           >
             {hasPreview ? (
               <>
-                <iframe
+                <LazyVideoEmbed
                   className="video-preview-frame"
                   title="Showreel preview"
                   src={`${showreel.embed}?rel=0&modestbranding=1&controls=1`}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                />
                 <div className="video-overlay">
                   <span className="video-overlay-text">Tap to open fullscreen preview</span>
                 </div>

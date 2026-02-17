@@ -26,8 +26,8 @@ export function MagicBentoSection() {
             enableTilt
             enableMagnetism
             clickEffect
-            spotlightRadius={800}
-            particleCount={12}
+            spotlightRadius={560}
+            particleCount={8}
             glowColor="132, 0, 255"
             disableAnimations={false}
           />

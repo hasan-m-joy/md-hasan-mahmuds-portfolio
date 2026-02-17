@@ -1,4 +1,5 @@
 import { isValidEmbed } from "../utils/validators";
+import { LazyVideoEmbed } from "./LazyVideoEmbed";
 
 export function WorkSection({ workItems, onOpenWorkItem }) {
   return (
@@ -40,14 +41,13 @@ export function WorkSection({ workItems, onOpenWorkItem }) {
                 <div className={`thumb${hasPreview ? " has-preview" : ""}`} aria-hidden="true">
                   {hasPreview && (
                     <>
-                      <iframe
+                      <LazyVideoEmbed
                         className="work-preview-frame"
                         title={`${item.title} preview`}
                         src={`${item.embed}?rel=0&modestbranding=1&controls=0`}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        tabIndex={-1}
-                      ></iframe>
+                      />
                       <div className="work-preview-overlay">
                         <span className="work-preview-text">Tap to open fullscreen preview</span>
                       </div>
