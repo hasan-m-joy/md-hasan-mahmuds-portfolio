@@ -272,21 +272,21 @@
 }
 
 .pc-avatar-content .avatar {
-  width: 94%;
+  width: 84%;
   position: absolute;
   z-index: 2;
   left: 50%;
   object-fit: cover;
-  object-position: center 14%;
+  object-position: center 12%;
   transform-origin: 50% 100%;
-  transform: translateX(calc(-50% + (var(--pointer-from-left) - 0.5) * 6px)) translateY(16px) translateZ(0)
+  transform: translateX(calc(-50% + (var(--pointer-from-left) - 0.5) * 6px)) translateY(20px) translateZ(0)
     scaleY(calc(1 + (var(--pointer-from-top) - 0.5) * 0.02)) scaleX(calc(1 + (var(--pointer-from-left) - 0.5) * 0.01));
-  bottom: -14px;
+  bottom: -16px;
   backface-visibility: hidden;
   will-change: transform;
   transition: transform 120ms ease-out;
-  filter: grayscale(0.92) sepia(0.22) hue-rotate(188deg) saturate(0.86) contrast(1.12) brightness(0.95);
-  mix-blend-mode: luminosity;
+  filter: saturate(1.04) contrast(1.02) brightness(0.98);
+  mix-blend-mode: normal;
   -webkit-mask-image: radial-gradient(72% 94% at 50% 42%, #000 56%, transparent 86%);
   mask-image: radial-gradient(72% 94% at 50% 42%, #000 56%, transparent 86%);
 }

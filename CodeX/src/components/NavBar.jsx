@@ -1,4 +1,4 @@
-import profileImage from "../../profile.png";
+import profileImage from "../../new_profile.png";
 import Dock from "./Dock";
 
 function WorkIcon() {

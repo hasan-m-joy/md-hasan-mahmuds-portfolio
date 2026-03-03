@@ -1,4 +1,4 @@
-import profileImage from "../../profile.png";
+import profileImage from "../../new_profile.png";
 
 export const siteProfile = {
   fullName: "MD Hasan Mahmud",
